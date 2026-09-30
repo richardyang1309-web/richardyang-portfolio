@@ -102,21 +102,16 @@ body{font-family:Poppins,"Helvetica Neue",Arial,sans-serif;color:#14202E}
     <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:10px"><span class="tag">Business Analyst</span><span class="tag">Service System Engineering</span><span class="tag">Operations &amp; Supply Chain</span><span class="tag">Facility Layout</span><span class="tag">Ergonomics &amp; OHS</span><span class="tag">Data Analysis</span></div>
   </div>
   <svg width="660" height="613" viewBox="0 0 560 520" style="position:absolute;right:130px;top:110px">
-    <g fill="none" stroke="#B9B09C" stroke-width="1.5">
-      <rect x="20" y="20" width="520" height="480"/>
-      <line x1="20" y1="140" x2="540" y2="140" stroke-dasharray="6 6"/><line x1="20" y1="260" x2="540" y2="260" stroke-dasharray="6 6"/><line x1="20" y1="380" x2="540" y2="380" stroke-dasharray="6 6"/>
-    </g>
-    
-    <g stroke="#0F7B6C" stroke-width="3" fill="none"><path d="M110 90 H200 V200 H300 V320 H400 V440 H470"/></g>
-    <g>
-      <rect x="92" y="72" width="36" height="36" fill="#F6F4EF" stroke="#14202E" stroke-width="2.5"/>
-      <circle cx="200" cy="200" r="20" fill="#F6F4EF" stroke="#0F7B6C" stroke-width="3"/>
-      <circle cx="300" cy="200" r="20" fill="#0F7B6C"/>
-      <polygon points="400,296 424,320 400,344 376,320" fill="#F6F4EF" stroke="#14202E" stroke-width="2.5"/>
-      <polygon points="470,420 492,460 448,460" fill="#C2703D"/>
-    </g>
-    
-  </svg>
+<defs>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#B9B09C" stroke-width="1.4"/></pattern>
+<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#E4DED0" stroke-width="1"/></pattern>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0F7B6C"/></marker>
+<marker id="dt" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 9L9 1" stroke="#14202E" stroke-width="1.5"/></marker>
+</defs>
+<rect x="40" y="40" width="440" height="400" fill="url(#grid)"/>
+<rect x="40" y="40" width="440" height="400" fill="none" stroke="#14202E" stroke-width="4"/>
+<rect x="210" y="36" width="70" height="8" fill="#F6F4EF"/><path d="M210 40 A70 70 0 0 1 280 110" fill="none" stroke="#14202E" stroke-width="1.2" stroke-dasharray="3 3"/>
+<rect x="80" y="80" width="70" height="50" fill="url(#hatch)" stroke="#14202E" stroke-width="2"/><rect x="80" y="170" width="70" height="50" fill="url(#hatch)" stroke="#14202E" stroke-width="2"/><rect x="80" y="260" width="70" height="50" fill="url(#hatch)" stroke="#14202E" stroke-width="2"/><rect x="80" y="350" width="70" height="50" fill="#F6F4EF" stroke="#14202E" stroke-width="2"/><rect x="230" y="340" width="90" height="60" fill="url(#hatch)" stroke="#14202E" stroke-width="2"/><rect x="370" y="260" width="70" height="50" fill="url(#hatch)" stroke="#14202E" stroke-width="2"/><rect x="370" y="170" width="70" height="50" fill="url(#hatch)" stroke="#14202E" stroke-width="2"/><rect x="370" y="80" width="70" height="50" fill="#F6F4EF" stroke="#14202E" stroke-width="2"/><rect x="230" y="120" width="90" height="140" fill="none" stroke="#14202E" stroke-width="1.5" stroke-dasharray="8 5"/><g fill="none" stroke="#0F7B6C" stroke-width="3" marker-end="url(#ah)"><path d="M115 130V162"/><path d="M115 220V252"/><path d="M115 310V342"/><path d="M150 375H222"/><path d="M320 370H405V318"/><path d="M405 260V228"/><path d="M405 170V138"/></g><circle cx="115" cy="105" r="11" fill="#F6F4EF" stroke="#14202E" stroke-width="2"/><circle cx="115" cy="105" r="3" fill="#14202E"/><circle cx="115" cy="195" r="11" fill="#F6F4EF" stroke="#14202E" stroke-width="2"/><circle cx="115" cy="195" r="3" fill="#14202E"/><circle cx="115" cy="285" r="11" fill="#F6F4EF" stroke="#14202E" stroke-width="2"/><circle cx="115" cy="285" r="3" fill="#14202E"/><circle cx="405" cy="285" r="11" fill="#F6F4EF" stroke="#14202E" stroke-width="2"/><circle cx="405" cy="285" r="3" fill="#14202E"/><circle cx="405" cy="195" r="11" fill="#F6F4EF" stroke="#14202E" stroke-width="2"/><circle cx="405" cy="195" r="3" fill="#14202E"/><rect x="258" y="358" width="34" height="24" fill="#0F7B6C"/><path d="M393 93h24v24h-24z" fill="none" stroke="#14202E" stroke-width="2"/><path d="M393 93l24 24M417 93l-24 24" stroke="#14202E" stroke-width="1.2"/><polygon points="115,362 127,386 103,386" fill="#C2703D"/><g stroke="#14202E" stroke-width="1.2" fill="none"><path d="M40 470H480" marker-start="url(#dt)" marker-end="url(#dt)"/><path d="M40 455V482M480 455V482"/><path d="M510 40V440" marker-start="url(#dt)" marker-end="url(#dt)"/><path d="M495 40H522M495 440H522"/><path d="M80 20H150" marker-start="url(#dt)" marker-end="url(#dt)"/><path d="M80 12V30M150 12V30"/></g><circle cx="275" cy="190" r="46" fill="none" stroke="#C2703D" stroke-width="2" stroke-dasharray="6 4"/><circle cx="275" cy="190" r="4" fill="#C2703D"/><g stroke="#14202E" stroke-width="1" opacity=".5"><path d="M20 250H40M480 250H500"/><path d="M260 20V40M260 440V460"/></g></svg>
   <div class="tblock"><div class="tbc" style="grid-column:span 2"><div class="tbl">Drawn by</div><div class="tbv">Richard Yang</div></div><div class="tbc" style=""><div class="tbl">Sheet</div><div class="tbv">01 / 13</div></div><div class="tbc" style="grid-column:span 2"><div class="tbl">Title</div><div class="tbv">Industrial Engineering Portfolio</div></div><div class="tbc" style=""><div class="tbl">Scale</div><div class="tbv">1 : 1</div></div><div class="tbc" style="grid-column:span 2"><div class="tbl">Institution</div><div class="tbv">BINUS University · Jakarta</div></div><div class="tbc" style=""><div class="tbl">Date</div><div class="tbv">2026</div></div></div>
 </section></div><div class="slide" data-i="1" aria-roledescription="slide" aria-label="2 of 13"><section class="page">
   <div class="rail"><span><b>Richard Yang</b> · Portfolio</span><span>Introduction</span></div>
