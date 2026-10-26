@@ -32,9 +32,9 @@ p,li{font-size:24px;line-height:1.6;color:var(--ink2)}
 .cs li:before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;background:var(--acc)}
 .tag{display:inline-block;font-size:18px;border:1px solid var(--line);background:#fff;padding:8px 16px;margin:0 8px 8px 0;color:var(--ink2)}
 .num{position:absolute;right:110px;top:78px;font-family:Lora,serif;font-size:150px;color:var(--sand);font-weight:600;line-height:1}
-.course{font-size:27px;color:var(--ink2);border-top:1px solid var(--line);padding-top:14px}
-.skill{border-top:2px solid var(--ink);padding-top:18px}.skill .sn{font-family:Lora,serif;font-size:56px;color:var(--sand);font-weight:600;line-height:1}
-.skill h4{font-family:Lora,serif;font-size:30px;font-weight:600;margin:10px 0 16px;line-height:1.2}.skill ul{list-style:none}.skill li{font-size:25px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink2)}
+.course{font-size:28px;color:var(--ink2);border-top:1px solid var(--line);padding:16px 0 4px}
+.skill{border-top:2px solid var(--ink);padding-top:18px}.skill .sn{font-family:Lora,serif;font-size:56px;color:#D9C9AE;font-weight:600;line-height:1}
+.skill h4{font-family:Lora,serif;font-size:32px;font-weight:600;margin:10px 0 18px;min-height:76px;line-height:1.2}.skill ul{list-style:none}.skill li{font-size:25px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink2)}
 .page:not(.dark)::before{content:"";position:absolute;right:0;top:0;width:520px;height:260px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='2' cy='2' r='1.4' fill='%23D9D4C7'/%3E%3C/svg%3E");-webkit-mask-image:linear-gradient(225deg,#000 20%,transparent 75%);mask-image:linear-gradient(225deg,#000 20%,transparent 75%);pointer-events:none}
 .page:not(.dark)::after{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(var(--acc) 0 38%,var(--warm) 38% 46%,var(--ink) 46%)}
 .page > *{position:relative;z-index:1}
@@ -62,8 +62,16 @@ body{margin:0}
 #stage .page.on{display:block}
 #nav{position:fixed;left:0;right:0;bottom:10px;display:flex;justify-content:center;align-items:center;gap:14px;z-index:9;font-family:Poppins,sans-serif}
 #nav button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(20,32,46,.8);color:#fff;font-size:20px;cursor:pointer}
+#nav #nx{width:auto;padding:0 18px;border-radius:21px;font-size:14px;font-weight:500;letter-spacing:.03em}
 #nav button:hover{background:#0F7B6C}
 #cnt{color:#fff;font-size:14px;letter-spacing:.12em;background:rgba(20,32,46,.8);padding:8px 14px;border-radius:20px;min-width:70px;text-align:center}
+#menubtn{position:fixed;top:9px;right:14px;z-index:12;font-family:Poppins,sans-serif;font-size:13px;font-weight:500;letter-spacing:.03em;padding:7px 14px;border-radius:18px;border:1px solid rgba(255,255,255,.3);background:rgba(20,32,46,.85);color:#fff;cursor:pointer}
+#menubtn:hover{background:#0F7B6C}
+#menu{position:fixed;top:48px;right:16px;z-index:12;width:300px;max-width:calc(100vw - 32px);max-height:calc(100vh - 80px);overflow:auto;background:#fff;border:1px solid #14202E;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.35);padding:8px;display:none;font-family:Poppins,sans-serif}
+#menu.open{display:block}
+#menu a{display:flex;gap:12px;align-items:center;padding:8px 12px;border-radius:6px;color:#14202E;text-decoration:none;font-size:14px;cursor:pointer}
+#menu a b{color:#0F7B6C;font-size:13px;min-width:22px}
+#menu a:hover{background:#E8F1EF}#menu a.cur{background:#14202E;color:#fff}#menu a.cur b{color:#7FD6C8}
 #bar{position:fixed;left:0;top:0;height:4px;background:#0F7B6C;z-index:9;transition:width .25s}
 </style></head><body><section class="page sheet">
   <div class="frame"></div><div class="zones zc"><span style="left:80px">1</span><span style="left:300px">2</span><span style="left:520px">3</span><span style="left:740px">4</span><span style="left:960px">5</span><span style="left:1180px">6</span><span style="left:1400px">7</span><span style="left:1620px">8</span></div><div class="zones zc zb"><span style="left:80px">1</span><span style="left:300px">2</span><span style="left:520px">3</span><span style="left:740px">4</span><span style="left:960px">5</span><span style="left:1180px">6</span><span style="left:1400px">7</span><span style="left:1620px">8</span></div><div class="zones zr"><span style="top:80px">A</span><span style="top:310px">B</span><span style="top:540px">C</span><span style="top:770px">D</span></div><div class="zones zr zrr"><span style="top:80px">A</span><span style="top:310px">B</span><span style="top:540px">C</span><span style="top:770px">D</span></div>
@@ -111,13 +119,13 @@ body{margin:0}
   <div class="kicker" style="margin-top:40px">Education</div>
   <h2>Bina Nusantara (BINUS) University</h2>
   <div class="meta" style="font-size:26px"><b>Bachelor of Industrial Engineering</b> · Jakarta · Sep 2024 – Sep 2028</div>
-  <div class="kpis" style="grid-template-columns:repeat(3,1fr);margin-top:56px">
-    <div class="kpi"><div class="n" style="font-size:72px">3.56</div><div class="l" style="font-size:23px">Cumulative GPA out of 4.00</div></div>
-    <div class="kpi"><div class="n" style="font-size:44px;padding-top:18px">Service System Engineering</div><div class="l" style="font-size:23px;margin-top:18px">Specialization</div></div>
-    <div class="kpi"><div class="n" style="font-size:72px">2028</div><div class="l" style="font-size:23px">Graduation</div></div>
+  <div class="kpis" style="grid-template-columns:.8fr 1.5fr .8fr;margin-top:56px;align-items:end">
+    <div class="kpi" style="padding-right:40px"><div class="n" style="font-size:80px">3.56</div><div class="l" style="font-size:23px">Cumulative GPA out of 4.00</div></div>
+    <div class="kpi" style="padding-right:40px"><div class="n" style="font-size:52px;white-space:nowrap;padding-bottom:12px">Service System Engineering</div><div class="l" style="font-size:23px;margin-top:18px">Specialization</div></div>
+    <div class="kpi"><div class="n" style="font-size:80px">2028</div><div class="l" style="font-size:23px">Graduation</div></div>
   </div>
-  <h3 style="margin-top:90px">Relevant coursework</h3>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px 40px;margin-top:10px">
+  <h3 style="margin-top:84px">Relevant coursework</h3>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 56px;margin-top:14px">
     <div class="course">Supply Chain Management</div><div class="course">Production Planning &amp; Inventory Control</div><div class="course">Production &amp; Operation Analysis</div>
     <div class="course">Human Integrated Systems</div><div class="course">Ergonomics &amp; OHS</div><div class="course">Stochastic Modeling</div>
     <div class="course">Financial Analysis</div><div class="course">Design of Experiments</div><div class="course">Business Process Mapping</div>
@@ -306,7 +314,7 @@ body{margin:0}
   <div class="rail"><span><b>Richard Yang</b> · Portfolio</span><span>Skills &amp; Tools</span></div>
   <div class="kicker" style="margin-top:40px">Skills &amp; tools</div>
   <h2>What I bring to a team</h2>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin-top:56px">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:44px;margin-top:56px">
     <div class="skill"><div class="sn">01</div><h4>Operations &amp; Supply Chain</h4><ul><li>Demand Forecasting</li><li>Aggregate Planning</li><li>MPS &amp; MRP</li><li>Kanban</li><li>Wagner-Whitin</li><li>CDS Scheduling</li><li>Process Optimization</li></ul></div>
     <div class="skill"><div class="sn">02</div><h4>Service &amp; Systems Engineering</h4><ul><li>Service Blueprinting</li><li>Business Process Mapping</li><li>Quality Function Deployment</li><li>Usability Testing (SUS, WAMMI)</li></ul></div>
     <div class="skill"><div class="sn">03</div><h4>Ergonomics &amp; OHS</h4><ul><li>Anthropometric Design</li><li>Workload &amp; Fatigue Analysis</li><li>Job Hazard Analysis</li><li>Fault Tree Analysis</li></ul></div>
@@ -347,18 +355,26 @@ body{margin:0}
 </section><script>
 function bars(id,data,max,unit,hl){document.getElementById(id).innerHTML=data.map(([k,v])=>{const on=k===hl;return `<div style="display:grid;grid-template-columns:150px 1fr 64px;align-items:center;gap:12px;margin:7px 0"><div style="font-size:17px;color:${on?'#14202E':'#6B7280'};font-weight:${on?600:400}">${k}</div><div style="height:14px;background:#EEEAE1"><div style="height:100%;width:${v/max*100}%;background:${on?'#0F7B6C':'#B9C2CC'}"></div></div><div style="font-size:17px;font-weight:600;color:${on?'#0F7B6C':'#2B3A4D'}">${v}${unit}</div></div>`}).join('')}
 if(document.getElementById('mape'))bars('mape',[['Moving avg (3)',5.84],['Moving avg (4)',5.83],["Holt's",4.68],['Decomposition',4.02],["Winters' ✓",2.93]],6.2,'%',"Winters' ✓");
-</script><div id="nav"><button id="pv" aria-label="Previous slide">&#8249;</button><div id="cnt"></div><button id="nx" aria-label="Next slide">&#8250;</button></div><div id="bar"></div>
+</script><div id="nav"><button id="pv" aria-label="Previous slide">&#8249;</button><div id="cnt"></div><button id="nx" aria-label="Next slide">Next &#8250;</button></div><div id="bar"></div><button id="menubtn" aria-label="Menu">&#9776; Menu</button><div id="menu"></div>
 <script>
 (function(){
 var pages=[].slice.call(document.querySelectorAll('section.page,.page'));
 pages=pages.filter(function(p,i,a){return a.indexOf(p)===i});
 var st=document.createElement('div');st.id='stage';document.body.insertBefore(st,document.body.firstChild);
 pages.forEach(function(p){st.appendChild(p)});
-var i=0;try{i=Math.min(pages.length-1,Math.max(0,(parseInt(location.hash.slice(1))||1)-1))}catch(e){}
-function fit(){var W=document.documentElement.clientWidth||innerWidth,H=document.documentElement.clientHeight||innerHeight;var k=Math.min(W/1920,(H-56)/1080);pages.forEach(function(p){p.style.left=(W/2)+'px';p.style.top=((H-56)/2)+'px';p.style.transform='translate('+(-960*k)+'px,'+(-540*k)+'px) scale('+k+')'})}
+var i=0;try{if(location.hash)history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+function fit(){var W=document.documentElement.clientWidth||innerWidth,H=document.documentElement.clientHeight||innerHeight;var k=Math.min((W-56)/1920,(H-120)/1080);pages.forEach(function(p){p.style.left=(W/2)+'px';p.style.top=(50+(H-120)/2)+'px';p.style.transform='translate('+(-960*k)+'px,'+(-540*k)+'px) scale('+k+')'})}
 function show(n){i=Math.max(0,Math.min(pages.length-1,n));pages.forEach(function(p,j){p.classList.toggle('on',j===i)});
 document.getElementById('cnt').textContent=(i+1)+' / '+pages.length;document.getElementById('bar').style.width=((i+1)/pages.length*100)+'%';
-try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
+var ml=document.querySelectorAll('#menu a');for(var q=0;q<ml.length;q++)ml[q].classList.toggle('cur',q===i)}
+var T=['Cover','About me','Education','HIMTRI: Research Staff','LDK: Secretary','HydroCarry','Razer Basilisk (POA)','Exam Score Prediction (EDA)','Multifunction Hanger','OneWave Factory Layout','Enrichment Fair Analysis','Skills and Strengths','Certificates and Volunteering','Contact'];
+var mb=document.getElementById('menubtn'),mn=document.getElementById('menu');
+mn.innerHTML=pages.map(function(p,j){return '<a href="javascript:void(0)" data-i="'+j+'"><b>'+(j+1<10?'0':'')+(j+1)+'</b>'+(T[j]||'Slide '+(j+1))+'</a>'}).join('');
+mb.onclick=function(e){e.stopPropagation();mn.classList.toggle('open')};
+mn.onclick=function(e){var a=e.target.closest('a');if(a){show(+a.getAttribute('data-i'));mn.classList.remove('open')}};
+document.addEventListener('click',function(e){if(!mn.contains(e.target))mn.classList.remove('open')});
+addEventListener('keydown',function(e){if(e.key==='Escape')mn.classList.remove('open')});
+
 document.getElementById('pv').onclick=function(){show(i-1)};document.getElementById('nx').onclick=function(){show(i+1)};
 addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')show(i+1);if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);if(e.key==='Home')show(0);if(e.key==='End')show(pages.length-1)});
 var x0=null;addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
